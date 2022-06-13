@@ -25,6 +25,7 @@ impl TreeNode {
                 Some(ref node) => node.borrow_mut().add(val),
             }
         }
+
         if val > self.val {
             match self.right {
                 None => self.right = Some(Rc::new(RefCell::new(TreeNode::new(val)))),

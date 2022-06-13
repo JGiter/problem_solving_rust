@@ -1,2 +1,4 @@
-mod bst_merge_sort;
-mod frog_jumps;
+pub mod bst_merge_sort;
+pub mod frog_jumps;
+pub mod sort;
+pub mod keys_and_rooms;
