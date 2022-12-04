@@ -36,7 +36,7 @@ impl TreeNode {
 }
 
 impl TreeNode {
-    fn sorted(&self) -> Vec<i32> {
+    pub fn sorted(&self) -> Vec<i32> {
         let mut s = Vec::new();
         if let Some(ref left) = self.left {
             s.append(&mut left.borrow_mut().sorted())
@@ -49,7 +49,7 @@ impl TreeNode {
     }
 }
 
-fn bst_merge_sort(
+pub fn bst_merge_sort(
     root1: Option<Rc<RefCell<TreeNode>>>,
     root2: Option<Rc<RefCell<TreeNode>>>,
 ) -> Vec<i32> {
